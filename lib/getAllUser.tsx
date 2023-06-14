@@ -1,0 +1,9 @@
+export default async function getAllUsers() {
+    const res = await fetch('https://jsonplaceholder.typicode.com/users')
+
+    if(!res.ok)throw new Error('Something went wrong while fetching the data')
+
+    return res.json()
+
+}
+
